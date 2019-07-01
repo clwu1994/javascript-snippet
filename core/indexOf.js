@@ -1,4 +1,5 @@
 import createIndexOfFinder from './createIndexOfFinder';
 import findIndex from './findIndex';
-const indexOf = createIndexOfFinder(1, findIndex);
+import sortedIndex from './sortedIndex';
+const indexOf = createIndexOfFinder(1, findIndex, sortedIndex);
 export default indexOf;

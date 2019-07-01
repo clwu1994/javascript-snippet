@@ -9,9 +9,11 @@
  * 从此位置开始逆向查找。默认为数组的长度减 1，即整个数组都被查找。如果该值大于或等于数组的长
  * 度，则整个数组会被查找。如果为负值，将其视为从数组末尾向前的偏移。即使该值为负，数组仍然会
  * 被从后向前查找。如果该值为负时，其绝对值大于数组长度，则方法返回 -1，即数组不会被查找。
+ * 如果 indexOf 第三个参数不传开始搜索的下标值，而是一个布尔值 true，就认为数组是一个排好序的数
+ * 组，这时候，就会采用更快的二分法进行查找，这个时候，可以利用我们写的 sortedIndex 函数。
  * @param {*} dir 
  */
-function createIndexOfFinder(dir, predicate) {
+function createIndexOfFinder(dir, predicate, sortedIndex) {
   return function (array, item, idx) {
     var length = array.length;
     var i = 0;
@@ -21,6 +23,11 @@ function createIndexOfFinder(dir, predicate) {
       } else {
         length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;
       }
+    }
+    else if (sortedIndex && idx && length) {
+      idx = sortedIndex(array, item)
+      // 如果该插入的位置的值正好等于元素的值，说明是第一个符合要求的值
+      return array[idx] === item ? idx : -1;
     }
     // 判断元素是否是NaN
     if (item !== item) {
