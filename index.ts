@@ -6,7 +6,11 @@ import {
   // indexOf,
   // lastIndexOf,
   // eq,
-  curry
+  // curry,
+  // dedupe,
+  // union
+  // intersect
+  difference
 } from './core';
 // const condition = (item) => item == 1;
 // console.log(findIndex(['a', 1, '3', 4], condition));
@@ -55,11 +59,15 @@ import {
 // var addCurry = curry(add);
 // console.log(addCurry(1, 2)); // 3
 
-var fn = curry(function(a, b, c) {
-  return [a, b, c];
-});
+// var fn = curry(function(a, b, c) {
+//   return [a, b, c];
+// });
 
-console.log(fn("a", "b", "c")) // ["a", "b", "c"]
-console.log(fn("a", "b")("c")) // ["a", "b", "c"]
-console.log(fn("a")("b")("c")) // ["a", "b", "c"]
-console.log(fn("a")("b", "c")) // ["a", "b", "c"]
+// console.log(fn("a", "b", "c")) // ["a", "b", "c"]
+// console.log(fn("a", "b")("c")) // ["a", "b", "c"]
+// console.log(fn("a")("b")("c")) // ["a", "b", "c"]
+// console.log(fn("a")("b", "c")) // ["a", "b", "c"]
+// console.log(dedupe([1, 2, 3, 2]))
+// console.log(union([1, 2, 3], [4, 3, 2]));
+// console.log(intersect([1, 2, 3], [4, 3, 2]));
+// console.log(difference([1, 2, 3], [4, 3, 2]));
