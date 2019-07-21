@@ -10,7 +10,13 @@ import {
   // dedupe,
   // union
   // intersect
-  difference
+  // difference,
+  // strMapToObj,
+  // objToStrMap,
+  // strMapToJson,
+  // mapToArrayJson,
+  // jsonToStrMap,
+  jsonToMap
 } from './core';
 // const condition = (item) => item == 1;
 // console.log(findIndex(['a', 1, '3', 4], condition));
@@ -71,3 +77,13 @@ import {
 // console.log(union([1, 2, 3], [4, 3, 2]));
 // console.log(intersect([1, 2, 3], [4, 3, 2]));
 // console.log(difference([1, 2, 3], [4, 3, 2]));
+// let myMap = new Map().set('yes', true).set('no', false);
+// console.log(strMapToObj(myMap));
+// console.log(objToStrMap({'yes': true, 'no': false}))
+// console.log(objToStrMap({'yes': true, 'no': false})
+// let myMap = new Map().set('yes', true).set('no', false);
+// console.log(strMapToJson(myMap));
+// let myMap = new Map().set(true, 7).set({foo: 3}, ['abc']);
+// console.log(mapToArrayJson(myMap))
+// console.log(jsonToStrMap('{"yes":true,"no":false}'));
+// console.log(jsonToMap('[[true, 7], [{"foo": 3}, ["abc"]]]'));

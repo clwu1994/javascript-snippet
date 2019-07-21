@@ -2,7 +2,8 @@
 
 1. 安装 babel-node
 ```
-npm i -g @babel/core @babel/node
+cnpm i -g @babel/core @babel/node
+cnpm i @babel/preset-env @babel/preset-typescript -D
 ```
 2. 安装 presets 并配置 .babelrc 文件
 ```

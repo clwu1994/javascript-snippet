@@ -14,3 +14,12 @@
 export { default as union } from './union';
 export { default as intersect } from './intersect';
 export { default as difference } from './difference';
+export { default as strMapToObj } from './strMapToObj';
+export { default as objToStrMap } from './objToStrMap';
+export { default as strMapToJson } from './strMapToJson';
+export { default as mapToArrayJson } from './mapToArrayJson';
+export { default as jsonToStrMap } from './jsonToStrMap';
+export { default as jsonToMap } from './jsonToMap';
+
+
+
